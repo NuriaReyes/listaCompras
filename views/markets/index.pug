@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  h1 Markets
+  table(class='table table-striped table-hover')
+    thead(class='thead-inverse')
+      tr
+        th Market
+        th Address
+        th Web Site
+        th
+    tbody
+      each m in markets
+        tr
+          td #{n.name}
+          td #{m.address}
+          td #{m.webSite}
+          td
+            img(src=m.logo)
