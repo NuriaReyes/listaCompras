@@ -1,5 +1,16 @@
-extends layout
+extends ../layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 My Bill
+  table(class='table table-striped table-hover')
+    thead(class='thead-inverse')
+      tr
+        th Name
+        th Price
+        th Quantity
+    tbody
+      each a in articles
+        tr
+          td #{a.name}
+          td #{a.price}
+          td #{a.quantity}

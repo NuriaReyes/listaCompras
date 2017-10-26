@@ -10,8 +10,6 @@ function index(req, res, next){
 function create(req, res, next) {
   let list = new List(
     {name: "Bolsas de arroz", quantity: 2}
-    {name: "Queso", quantity: 1}
-    {name: "Yogurts bebibles", quantity: 5}
   );
   list.save( err => {
     if(err){
